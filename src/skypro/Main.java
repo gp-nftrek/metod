@@ -64,6 +64,15 @@ public class Main {
         }
     }
 
+    public static void reversMassiva(int[] arr) {
+        int[] Reversearr = arr;
+        for (int i = Reversearr.length - 1; i >= 0; i--) {
+            System.out.print(Reversearr[i]);
+        }
+
+
+    }
+
     public static void main(String[] args) {
 //        int[] issuesMonth = {4, 6, 7, 9, 2, 5, 12, 3, 7, 10, 6, 7, 1, 8};
 //        printSeparator();
@@ -96,7 +105,17 @@ public class Main {
         dostavkaSrok(rasstoyanie);
 
         //       задача4
+// помоги, я еще не дошел до задач повышенной сложности по строкам
+        // как найти дублирующиеся символы?
 
+        //       задача5
+        int[] arr = {3, 2, 1, 6, 5};
+        reversMassiva(arr);
+//        Рекомендуем написать этот метод без возвращаемого значения.
+//                Вы будете приятно удивлены, что даже если мы не вернем массив,
+//        первоначальный массив изменится,
+//        когда мы будем модернизировать пришедший в виде параметра массив внутри метода.
 
+//        вот это условие не понял! я правильно сделал? печатается наоборот.
     }
 }
