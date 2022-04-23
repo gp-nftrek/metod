@@ -69,9 +69,16 @@ public class Main {
         for (int i = Reversearr.length - 1; i >= 0; i--) {
             System.out.print(Reversearr[i]);
         }
-
-
     }
+        public static void zadacha4 (String s) {
+            String ss = s;
+            String[] sorting = s.trim().split("");
+            for (int i = 0; i < sorting.length - 1; i++) {
+                if (sorting[i].equals(sorting[i + 1])) {
+                    System.out.print(sorting[i]);
+                }
+            }
+        }
 
     public static void main(String[] args) {
 //        int[] issuesMonth = {4, 6, 7, 9, 2, 5, 12, 3, 7, 10, 6, 7, 1, 8};
@@ -105,10 +112,13 @@ public class Main {
         dostavkaSrok(rasstoyanie);
 
         //       задача4
-// помоги, я еще не дошел до задач повышенной сложности по строкам
-        // как найти дублирующиеся символы?
+        String s = "aabccddefgghiijjkk";
+        zadacha4 (s);
+
 
         //       задача5
+        System.out.println();
+        System.out.println();
         int[] arr = {3, 2, 1, 6, 5};
         reversMassiva(arr);
 //        Рекомендуем написать этот метод без возвращаемого значения.
