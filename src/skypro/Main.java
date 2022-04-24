@@ -20,7 +20,7 @@ public class Main {
 //        return sum;
 //    }
     public static void proverkaGoda(int god) {
-           if (god % 4 == 0 && god % 100 != 0) {
+        if (god % 4 == 0 && god % 100 != 0) {
             System.out.println("god visokosniy");
         } else if (god % 400 == 0) {
             System.out.println("god visokosniy");
@@ -30,53 +30,59 @@ public class Main {
     }
 
     public static void anroidIphone(int a, int b) {
-        int clientOS = a;
-        int clientDeviceYear = b;
+
         int currentYear = LocalDate.now().getYear();
-        if (clientOS == 1 && clientDeviceYear == currentYear) {
+        if (a == 1 && b == currentYear) {
             System.out.println("ustanovite prilojenie android po ssilke");
         }
-        if (clientOS == 1 && clientDeviceYear < currentYear) {
+        if (a == 1 && b < currentYear) {
             System.out.println("ustanovita obleg4ennuyu versiu ANDROID po ssilke");
         }
-        if (clientOS == 0 && clientDeviceYear == currentYear) {
+        if (a == 0 && b == currentYear) {
             System.out.println("ustanovite prilojenie iOS po ssilke");
         }
-        if (clientOS == 0 && clientDeviceYear < currentYear) {
+        if (a == 0 && b < currentYear) {
             System.out.println("ustanovita obleg4ennuyu versiu iOS po ssilke");
         }
     }
 
     public static void dostavkaSrok(int rasstoyanie) {
-        int deliveryDistance = rasstoyanie;
+
 
         int deliveryDay = 1;
-        if (deliveryDistance <= 20) {
+        if (rasstoyanie <= 20) {
             System.out.println("dostavka zaymet " + deliveryDay + " den");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        } else if (rasstoyanie > 20 && rasstoyanie <= 60) {
             System.out.println("dostavka zaymet " + (deliveryDay + 1 + " dnia"));
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+        } else if (rasstoyanie > 60 && rasstoyanie <= 100) {
             System.out.println("dostavka zaymet " + (deliveryDay + 2 + " dnia"));
         } else {
             System.out.println("dostavki net");
         }
     }
 
-    public static void reversMassiva(int[] arr) {
-        int[] Reversearr = arr;
-        for (int i = Reversearr.length - 1; i >= 0; i--) {
-            System.out.print(Reversearr[i]);
-        }
-    }
-        public static void zadacha4 (String s) {
-            String ss = s;
-            String[] sorting = s.trim().split("");
-            for (int i = 0; i < sorting.length - 1; i++) {
-                if (sorting[i].equals(sorting[i + 1])) {
-                    System.out.print(sorting[i]);
-                }
+
+    public static void zadacha4(String s) {
+        String[] sorting = s.trim().split("");
+        for (int i = 0; i < sorting.length - 1; i++) {
+            if (sorting[i].equals(sorting[i + 1])) {
+                System.out.print(sorting[i]);
             }
         }
+    }
+
+    public static void reversMassiva(int[] arr) {
+        for (int i = 0; i < arr.length-1; i++) {
+            for (int j = i + 1; j < arr.length-1; j++) {
+                int temp = 0;
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                System.out.print(arr[i]);
+            }
+        }
+
+    }
 
     public static void main(String[] args) {
 //        int[] issuesMonth = {4, 6, 7, 9, 2, 5, 12, 3, 7, 10, 6, 7, 1, 8};
@@ -106,12 +112,12 @@ public class Main {
 
         //       задача3
 
-        int rasstoyanie = 35;
+        int rasstoyanie = 1;
         dostavkaSrok(rasstoyanie);
 
         //       задача4
         String s = "aabccddefgghiijjkk";
-        zadacha4 (s);
+        zadacha4(s);
 
 
         //       задача5
