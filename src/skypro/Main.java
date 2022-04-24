@@ -20,11 +20,9 @@ public class Main {
 //        return sum;
 //    }
     public static void proverkaGoda(int god) {
-        int year = god;
-
-        if (year % 4 == 0 && year % 100 != 0) {
+           if (god % 4 == 0 && god % 100 != 0) {
             System.out.println("god visokosniy");
-        } else if (year % 400 == 0) {
+        } else if (god % 400 == 0) {
             System.out.println("god visokosniy");
         } else {
             System.out.println("god ne visokosniy");
@@ -97,7 +95,7 @@ public class Main {
 
         //       задача1
 
-        int god = 2020;
+        int god = 1700;
         proverkaGoda(god);
 
         //       задача2
@@ -121,11 +119,6 @@ public class Main {
         System.out.println();
         int[] arr = {3, 2, 1, 6, 5};
         reversMassiva(arr);
-//        Рекомендуем написать этот метод без возвращаемого значения.
-//                Вы будете приятно удивлены, что даже если мы не вернем массив,
-//        первоначальный массив изменится,
-//        когда мы будем модернизировать пришедший в виде параметра массив внутри метода.
 
-//        вот это условие не понял! я правильно сделал? печатается наоборот.
     }
 }
